@@ -3,6 +3,7 @@
 describe("Check Udemy home page", () => {
   beforeEach(() => {
     cy.visit("/");
+    cy.wait(2000);
   });
 
   const topics = [
@@ -15,7 +16,7 @@ describe("Check Udemy home page", () => {
     "Drawing",
   ];
 
-  it("Check Nav Buttons", () => {
+  it("Check Navigation Buttons", () => {
     for (let i = 0; i < 7; i++) {
       cy.get(`[data-index = ${i}] > div > button`)
         .should("exist")
@@ -24,11 +25,37 @@ describe("Check Udemy home page", () => {
     }
   });
 
-  it.only("Check navigation to each topic page", () => {
+  it("Check navigation to each topic page", () => {
     cy.get("[data-purpose = tab-container] > div > div > div > a > span").each(
       ($item, index) => {
-        cy.wrap($item).should("have.text", `Explore ${topics[index]}`);
+        cy.get(`[data-index = ${index}] > div > button`).click();
+        cy.wrap($item)
+          .should("exist")
+          .and("have.text", `Explore ${topics[index]}`);
       }
     );
+  });
+
+  it.only("Check 'Students are viewing' panel", () => {
+    cy.get("[data-purpose = discovery-unit-1152523765]")
+      .should("exist")
+      .and("have.text", "Students are viewing");
+
+    cy.get("#course-unit-container-Studentsareviewing > div")
+      .should("exist")
+      .and("have.length", 18)
+      .as("courses");
+
+    cy.get("@courses").each(($item, index) => {
+      cy.wait(2000);
+      cy.wrap($item).trigger("mouseover");
+      cy.wait(1000);
+      cy.wrap($item).trigger("mouseout");
+      if (index % 3 == 0) {
+        cy.get(
+          "#course-unit-container-Studentsareviewing + button + button"
+        ).click();
+      }
+    });
   });
 });
