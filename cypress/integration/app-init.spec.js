@@ -3,7 +3,7 @@
 describe("Check Udemy home page", () => {
   beforeEach(() => {
     cy.visit("/");
-    cy.wait(2000);
+    cy.wait(10000); //Time to ensure all xhr requests to complete, otherwise further tests can fail.
   });
 
   const topics = [
@@ -14,6 +14,17 @@ describe("Check Udemy home page", () => {
     "Data Science",
     "AWS Certification",
     "Drawing",
+  ];
+
+  const categories = [
+    "design",
+    "development",
+    "marketing",
+    "it-and-software",
+    "personal-development",
+    "business",
+    "photography",
+    "music",
   ];
 
   it("Check Navigation Buttons", () => {
@@ -36,7 +47,7 @@ describe("Check Udemy home page", () => {
     );
   });
 
-  it.only("Check 'Students are viewing' panel", () => {
+  it("Check 'Students are viewing' panel", () => {
     cy.get("[data-purpose = discovery-unit-1152523765]")
       .should("exist")
       .and("have.text", "Students are viewing");
@@ -56,6 +67,31 @@ describe("Check Udemy home page", () => {
           "#course-unit-container-Studentsareviewing + button + button"
         ).click();
       }
+    });
+  });
+
+  it.only("Checking top categories", () => {
+    cy.get("section.udlite-container > h2.top-categories--title--261i0")
+      .should("exist")
+      .and("be.visible")
+      .and("have.text", "Top categories");
+
+    cy.get(
+      "section.udlite-container > div.top-categories--desktop-top-categories--rjvJV > div"
+    ).each(($category, index) => {
+      cy.wrap($category).within(($item) => {
+        cy.get("a").should(
+          "have.attr",
+          "href",
+          `/courses/${categories[index]}/`
+        );
+        cy.get("img").should("have.attr", "alt", categories[index]);
+        cy.get("img").should(
+          "have.attr",
+          "src",
+          `https://s.udemycdn.com/home/top-categories/lohp-category-${categories[index]}.jpg`
+        );
+      });
     });
   });
 });
