@@ -157,9 +157,37 @@ describe("Check Udemy home page", () => {
         .should("exist")
         .and("be.visible");
     });
+
+    it("Check Billboard", () => {
+      cy.get("[data-purpose = billboard]").within(() => {
+        //image
+        cy.get("img").should("exist").and("be.visible").and("have.attr", "src");
+
+        //content
+        cy.get("[data-purpose = tab-container]")
+          .should("exist")
+          .and("be.visible");
+      });
+    });
   });
 
   context("Body of Home Page", () => {
+    let title = "\nThe world's largest selection of courses\n";
+    let subtitle =
+      "\nChoose from 130,000 online video courses with new additions published every month\n";
+
+    it("Check Main Title", () => {
+      cy.get("div.headline__main-text")
+        .should("exist")
+        .and("be.visible")
+        .and("have.text", title);
+
+      cy.get("div.headline__sub-text")
+        .should("exist")
+        .and("be.visible")
+        .and("have.text", subtitle);
+    });
+
     it("Check Navigation Buttons", () => {
       for (let i = 0; i < 7; i++) {
         cy.get(`[data-index = ${i}] > div > button`)
@@ -202,6 +230,17 @@ describe("Check Udemy home page", () => {
           ).click();
         }
       });
+    });
+
+    it("Check Onboarding Banner", () => {
+      cy.get("div.onboarding--banner--18VFk")
+        .should("exist")
+        .and("be.visible")
+        .within(() => {
+          cy.get("[data-purpose = title]");
+          cy.get("[data-purpose = subtitle]");
+          cy.get("[data-purpose = submit-button]");
+        });
     });
 
     it("Checking top categories", () => {
@@ -313,13 +352,15 @@ describe("Check Udemy home page", () => {
               cy.get("h3")
                 .should("exist")
                 .and("be.visible")
-                .and("have.text", "Become an Instructor");
+                .and("have.text", "Become an instructor");
               cy.get("p").should("exist").and("be.visible");
               cy.get("div > a")
                 .should("exist")
                 .and("be.visible")
                 .contains("Start teaching today")
                 .click();
+              cy.wait(1000);
+
               cy.go("back");
             });
         });
@@ -349,9 +390,10 @@ describe("Check Udemy home page", () => {
               cy.get("div > a")
                 .should("exist")
                 .and("be.visible")
-                .contains("Get Udemy for Business")
-                .click();
-              cy.go("back");
+                .contains("Get Udemy for Business");
+              // .click(); //CORS Blocking
+              // cy.wait(1000);
+              // cy.go("back");
             });
         });
     });
@@ -378,7 +420,7 @@ describe("Check Udemy home page", () => {
       });
     });
 
-    it.only("Bottomost Panel (Links, Language, Logo and Copyright)", () => {
+    it("Bottomost Panel (Links, Language, Logo and Copyright)", () => {
       cy.get("div.footer-section-main").within(() => {
         //Links and Language
         cy.get("div.links-and-locale").within(() => {
