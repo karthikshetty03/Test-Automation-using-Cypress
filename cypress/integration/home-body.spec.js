@@ -45,16 +45,16 @@ describe("Check Body of Udemy's home page", () => {
         .and("have.text", subtitle);
     });
 
-    it("Check Navigation Buttons", () => {
+    it("Check Skills hub Panel", () => {
+      //Check topics navigation bar
       for (let i = 0; i < 7; i++) {
         cy.get(`[data-index = ${i}] > div > button`)
           .should("exist")
           .and("have.text", topics[i])
           .click();
       }
-    });
 
-    it("Check navigation to each topic page", () => {
+      //Checks on navigation to ach topic
       cy.get(
         "[data-purpose = tab-container] > div > div > div > a > span"
       ).each(($item, index) => {

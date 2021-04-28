@@ -2,7 +2,7 @@
 
 describe("Check Footer of Udemy's home page", () => {
   beforeEach(() => {
-    cy.VisitandWait();
+    cy.VisitAndWait();
   });
 
   context("Desktop View", () => {
@@ -93,7 +93,7 @@ describe("Check Footer of Udemy's home page", () => {
       });
     });
 
-    it.only("Bottomost Panel (Links, Language, Logo and Copyright)", () => {
+    it("Bottomost Panel (Links, Language, Logo and Copyright)", () => {
       cy.get("div.footer-section-main").within(() => {
         //Links and Language
         cy.get("div.links-and-locale").within(() => {

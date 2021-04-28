@@ -134,7 +134,7 @@ describe("Check header of Udemy's home page", () => {
         .and("be.visible");
     });
 
-    it.only("Check Billboard", () => {
+    it("Check Billboard", () => {
       cy.get("[data-purpose = billboard]").within(() => {
         //image
         cy.get("img").should("exist").and("be.visible").and("have.attr", "src");
