@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Intercept Requests on 'Students are Viewing' Panel", () => {
+describe("Testing cards on Skills Hub Panel", () => {
   beforeEach(() => {
     cy.VisitAndWait();
   });
