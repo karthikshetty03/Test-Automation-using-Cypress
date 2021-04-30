@@ -101,7 +101,7 @@ describe("Checking the Cart functionality", () => {
       addingCourseFromSkillsHub();
     });
 
-    it("Deleting a course in the cart from students are viewing Panele", () => {
+    it("Deleting a course from the cart of students are viewing Panele", () => {
       addingCourseFromTrending();
 
       cy.url().should("eq", "https://www.udemy.com/cart/");
@@ -137,12 +137,11 @@ describe("Checking the Cart functionality", () => {
         .and("have.text", `${topics.length} Courses in Cart`);
 
       //Delete all items in the cart
-      //Asynchronous, can fail sometimes!
-      // cy.get("[data-purpose = actions]").click({ multiple: true });
-      cy.get("[data-purpose = actions]").each(($item) => {
-        cy.wrap($item).click();
-        cy.wait(2000);
-      });
+      for (let i = 0; i < topics.length; i++) {
+        cy.get("div.styles--sc-card__actions--3C_uV > span:nth-child(1) > a")
+          .first()
+          .click();
+      }
 
       cy.get("[data-purpose = cart-list-title]")
         .should("exist")
