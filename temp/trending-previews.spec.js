@@ -7,7 +7,8 @@ describe("Testing cards on 'Students are Viewing' Panel", () => {
 
   context("Desktop View", () => {
     it("Course Cards", () => {
-      for (let i = 0; i < 18; i++) {
+      //Change it to 18 for all courses
+      for (let i = 0; i < 4; i++) {
         cy.get(
           `#course-unit-container-Studentsareviewing > [data-index = ${i}]`
         ).as("course" + i);
@@ -15,8 +16,8 @@ describe("Testing cards on 'Students are Viewing' Panel", () => {
 
       let popup =
         "div.course-details-quick-view-box--popover-wrapper--3jFIa > div > div > div > div";
-
-      for (let i = 0; i < 18; i++) {
+      //change it to 18 for all courses.
+      for (let i = 0; i < 4; i++) {
         if (i != 0) {
           cy.get(popup).should("not.exist");
         }
