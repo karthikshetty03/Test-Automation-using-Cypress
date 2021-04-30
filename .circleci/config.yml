@@ -1,8 +1,14 @@
 version: 2.1
 orbs:
-  node: circleci/node@3.0.0
+  cypress: cypress-io/cypress@1
+jobs:
+build:
+  steps:
+    - run:
+        name: Prepare
+        command: npm install
 workflows:
-  node-tests:
+  build:
     jobs:
       - cypress/install
       - cypress/run:
