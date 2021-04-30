@@ -126,7 +126,7 @@ describe("Checking the Cart functionality", () => {
       cy.url().should("eq", "https://www.udemy.com/");
     });
 
-    it.only("Deleting all courses of skills hub panel in the cart", () => {
+    it("Deleting all courses of skills hub panel in the cart", () => {
       addingCourseFromSkillsHub();
 
       cy.url().should("eq", "https://www.udemy.com/cart/");

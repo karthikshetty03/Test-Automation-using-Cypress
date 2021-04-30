@@ -1,3 +1,4 @@
 {
-  "baseUrl": "https://www.udemy.com"
+  "baseUrl": "https://www.udemy.com",
+  "video": false
 }
