@@ -1,9 +1,4 @@
 # Cypress-Microtasks-GSOC-21
 
-### Todo
+### Cypress Tests for https://www.udemy.com/
 
-### --> Few tests for mobile view
-### --> Code Optimization
-### --> Code Cleanup
-### --> Deploy on Circle CI (for cross-browser testing)
-### --> Documentation

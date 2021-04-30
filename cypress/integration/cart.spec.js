@@ -96,12 +96,6 @@ describe("Checking the Cart functionality", () => {
       addingCourseFromTrending();
     });
 
-    it("Adding a course from each skill in Skills Hub Panel", () => {
-      //Cart should not have any items initially
-      cy.get("div.shopping-item--buyable-info--1k-48").should("not.exist");
-      addingCourseFromSkillsHub();
-    });
-
     it("Deleting a course from the cart of students are viewing Panel", () => {
       addingCourseFromTrending();
 
@@ -125,6 +119,12 @@ describe("Checking the Cart functionality", () => {
         .click();
 
       cy.url().should("eq", "https://www.udemy.com/");
+    });
+
+    it("Adding a course from each skill in Skills Hub Panel", () => {
+      //Cart should not have any items initially
+      cy.get("div.shopping-item--buyable-info--1k-48").should("not.exist");
+      addingCourseFromSkillsHub();
     });
 
     it("Deleting all courses of skills hub panel in the cart", () => {
