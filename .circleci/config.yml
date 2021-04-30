@@ -4,4 +4,21 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test
+      - cypress/install
+      - cypress/run:
+          name: firefox
+          requires:
+            - cypress/install 
+          executor: cypress/browsers-chrome73-ff68
+          browser: firefox
+          command: npm run cypress:all
+          group: firefox
+
+      - cypress/run:
+          name: chrome
+          requires:
+            - cypress/install
+          executor: cypress/browsers-chrome73-ff68
+          browser: chrome
+          command: npm run cypress:all
+          group: chrome
