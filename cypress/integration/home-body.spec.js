@@ -33,7 +33,7 @@ describe("Check Body of Udemy's home page", () => {
     let subtitle =
       "\nChoose from 130,000 online video courses with new additions published every month\n";
 
-    it("Check Main Title", () => {
+    it("Check Main Title and Sub title", () => {
       cy.get("div.headline__main-text")
         .should("exist")
         .and("be.visible")
@@ -54,7 +54,7 @@ describe("Check Body of Udemy's home page", () => {
           .click();
       }
 
-      //Checks on navigation to ach topic
+      //Checks on navigation to aach topic
       cy.get(
         "[data-purpose = tab-container] > div > div > div > a > span"
       ).each(($item, index) => {
