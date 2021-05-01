@@ -5,7 +5,7 @@
 <br/>
 
 ## Why this website?
-<hr/>
+
 
 This website has course cards which are similar to the wikipedia preview plugin and can face isues similar to that mentioned in this [storybook](https://wikimedia.github.io/wikipedia-preview/storybook-static/?path=/story/wikipedia-preview--standard-with-image)
 
@@ -36,7 +36,7 @@ This website has course cards which are similar to the wikipedia preview plugin 
 <br/>
 
 ## Test Details
-<hr/>
+
 
  - ### [home-header.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-header.spec.js)
 
@@ -65,7 +65,7 @@ $ npm run cypress:all
 
 ## Results
 
-<hr/>
+
 
 ```
 #!/bin/bash -eo pipefail
