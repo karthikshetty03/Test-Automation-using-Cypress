@@ -337,6 +337,7 @@ CircleCI received exit code 0
 
 ## Note
  - All images are taken from [Udemy](https://www.udemy.com/) website and used for reference purpose only
+ - Mobile View is similar with almost no change
  - Running all the tests together on headless browser (locally or CIrcleCI) can fail some tests as there will be problems with popups not showing up etc.
  - In this case, you can run ``` $ npm run cypress ``` and open a file of your choice.
 
