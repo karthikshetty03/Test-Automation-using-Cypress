@@ -2,7 +2,7 @@
 
 describe("Testing cards on Skills Hub Panel", () => {
   beforeEach(() => {
-    cy.VisitAndWait();
+    cy.VisitAndWait(); 
   });
 
   const topics = [

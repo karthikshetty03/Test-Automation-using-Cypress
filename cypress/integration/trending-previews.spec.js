@@ -2,7 +2,7 @@
 
 describe("Testing cards on 'Students are Viewing' Panel", () => {
   beforeEach(() => {
-    cy.VisitAndWait();
+    cy.VisitAndWait(); 
   });
 
   context("Desktop View", () => {
