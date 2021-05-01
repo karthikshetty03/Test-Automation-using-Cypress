@@ -125,10 +125,10 @@ describe("Check header of Udemy's home page", () => {
       cy.get("@cart").should("exist").and("be.visible");
       cy.get("[data-purpose = cart-icon]").trigger("mouseover");
 
-      //5. Login Button    (Functionality cannot be tested due to security reasons)
+      //5. Login Button    (Functionality cannot be tested due to website secured with GOOGLE Recaptcha)
       cy.get("[data-purpose = header-login]").should("exist").and("be.visible");
 
-      //6. Sign up button  (functionaltiy cannot be tested due to security reasons)
+      //6. Sign up button  (functionaltiy cannot be tested due to website secured with GOOGLE Recaptcha)
       cy.get("[data-purpose = header-signup]")
         .should("exist")
         .and("be.visible");
@@ -140,7 +140,7 @@ describe("Check header of Udemy's home page", () => {
         cy.get("img").should("exist").and("be.visible").and("have.attr", "src");
 
         //content
-        //Dynamic content can be any one of the below
+        //Dynamic content can be any one of the below Billboards
 
         // cy.get("div.billboard--content-box--JtXUJ")
         //   .should("exist")
