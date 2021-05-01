@@ -38,13 +38,15 @@ This website has course cards which are similar to the wikipedia preview plugin 
 ## Test Details
 
 
- - ### [home-header.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-header.spec.js)
+ ### [home-header.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-header.spec.js)
+ 
+ ![Screenshot from 2021-05-01 16-12-22](https://user-images.githubusercontent.com/45932358/116780128-1f312f00-aa98-11eb-9475-fd861e3ee754.png)
 
 
- - ### [home-body.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-body.spec.js)
- - ### [home-footer.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-body.spec.js)
- - ### [trending-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/trending-previews.spec.js)
- - ### [skills-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/skills-previews.spec.js)
+### [home-body.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-body.spec.js)
+### [home-footer.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-body.spec.js)
+### [trending-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/trending-previews.spec.js)
+### [skills-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/skills-previews.spec.js)
 
 ## Installation
 
