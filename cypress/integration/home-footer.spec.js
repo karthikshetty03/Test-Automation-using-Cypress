@@ -64,7 +64,7 @@ describe("Check Footer of Udemy's home page", () => {
                 .should("exist")
                 .and("be.visible")
                 .contains("Get Udemy for Business");
-              // .click(); //CORS Blocking
+              // .click(); //CORS Blocking, test will fail!
               // cy.wait(1000);
               // cy.go("back");
             });
