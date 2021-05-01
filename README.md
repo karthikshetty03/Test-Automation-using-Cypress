@@ -38,11 +38,40 @@ This website has course cards which are similar to the wikipedia preview plugin 
 ## Test Details
 
  - ### [home-header.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-header.spec.js)
+   - #### Navbar and Billboard
  ![Screenshot from 2021-05-01 16-12-22](https://user-images.githubusercontent.com/45932358/116780212-cf9f3300-aa98-11eb-9b39-8d7a668819ab.png)
 
 
  - ### [home-body.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-body.spec.js)
+   - #### 'Skills Hub' Panel
+   ![Screenshot from 2021-05-01 16-20-22](https://user-images.githubusercontent.com/45932358/116780380-03c72380-aa9a-11eb-9956-19100320cc2e.png)
+
+   - #### 'Students are Viewing' Panel
+   ![Screenshot from 2021-05-01 16-27-42](https://user-images.githubusercontent.com/45932358/116780400-34a75880-aa9a-11eb-8a73-acfaec05aab3.png)
+
+   - #### Onboarding Banner
+   ![Screenshot from 2021-05-01 16-28-37](https://user-images.githubusercontent.com/45932358/116780415-4ee13680-aa9a-11eb-90a0-0915c4648543.png)
+
+   - #### Top Categories
+   ![Screenshot from 2021-05-01 16-29-18](https://user-images.githubusercontent.com/45932358/116780433-6a4c4180-aa9a-11eb-8449-9c0d575fe2ec.png)
+
+   - #### Featured Topics by Category
+   ![Screenshot from 2021-05-01 16-30-10](https://user-images.githubusercontent.com/45932358/116780447-86e87980-aa9a-11eb-8a77-1ff5a09b23b9.png)
+
+
  - ### [home-footer.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/home-body.spec.js)
+   - #### 'Teach on Udemy' box
+   ![Screenshot from 2021-05-01 16-32-08](https://user-images.githubusercontent.com/45932358/116780487-cb741500-aa9a-11eb-8b2c-3b19d822e706.png)
+
+   - #### 'Udemy for Business' box
+   ![Screenshot from 2021-05-01 16-33-14](https://user-images.githubusercontent.com/45932358/116780513-f6f6ff80-aa9a-11eb-95e5-378e63dd36df.png)
+
+   - #### 'User Stories' panel
+   ![Screenshot from 2021-05-01 16-34-24](https://user-images.githubusercontent.com/45932358/116780553-23128080-aa9b-11eb-91af-d65aa5441c89.png)
+
+   - #### Bottomost panel
+   ![Screenshot from 2021-05-01 16-35-09](https://user-images.githubusercontent.com/45932358/116780570-39b8d780-aa9b-11eb-8bf9-8a3c49389051.png)
+
  - ### [trending-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/trending-previews.spec.js)
  - ### [skills-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/skills-previews.spec.js)
 ## Installation
