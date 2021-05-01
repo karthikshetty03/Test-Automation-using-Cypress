@@ -139,7 +139,7 @@ describe("Check header of Udemy's home page", () => {
         //image
         cy.get("img").should("exist").and("be.visible").and("have.attr", "src");
 
-        //content
+        //content 
         //Dynamic content can be any one of the below Billboards
 
         // cy.get("div.billboard--content-box--JtXUJ")

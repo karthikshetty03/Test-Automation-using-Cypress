@@ -76,7 +76,7 @@ describe("Check Body of Udemy's home page", () => {
         .should("exist")
         .and("be.visible")
         .within(() => {
-          // cy.get("h2").should("exist").and("be.visible");  //[Glitch in the website: The element exists but is not visible]
+          // cy.get("h2").should("exist").and("be.visible");   //[Glitch in the website: The element exists but is not visible]
           cy.get("div.value-props--prop--1d4kK")
             .should("exist")
             .and("be.visible")
