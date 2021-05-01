@@ -73,8 +73,14 @@ This website has course cards which are similar to the wikipedia preview plugin 
    ![Screenshot from 2021-05-01 16-35-09](https://user-images.githubusercontent.com/45932358/116780570-39b8d780-aa9b-11eb-8bf9-8a3c49389051.png)
 
  - ### [trending-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/trending-previews.spec.js)
+ ![Screenshot from 2021-05-01 17-07-53](https://user-images.githubusercontent.com/45932358/116781591-75ef3680-aaa1-11eb-952c-fde8914391e3.png)
+
  - ### [skills-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/skills-previews.spec.js)
+  ![Screenshot from 2021-05-01 17-20-40](https://user-images.githubusercontent.com/45932358/116781616-9ae3a980-aaa1-11eb-8aed-51aab3e94470.png)
+
  - ### [cart.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/cart.spec.js)
+ ![Screenshot from 2021-05-01 17-23-57](https://user-images.githubusercontent.com/45932358/116781672-0a599900-aaa2-11eb-874a-646746f2f750.png)
+
 
 ## Installation
 
