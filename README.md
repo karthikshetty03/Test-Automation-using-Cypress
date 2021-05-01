@@ -335,4 +335,7 @@ Fontconfig warning: "/etc/fonts/fonts.conf", line 100: unknown element "blank"
 CircleCI received exit code 0
 ```
 
+## Note
+ - All images are taken from [Udemy](https://www.udemy.com/) website and used for reference purpose only
+ - Running all the tests together on headless browser (locally or CIrcleCI) can fail some tests as there will be problems with popups not showing up etc.
 
