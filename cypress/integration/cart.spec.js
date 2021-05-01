@@ -8,7 +8,6 @@ const topics = [
   "Drawing",
 ];
 
-//adding Course from the skills Hub Panel
 const addingCourseFromSkillsHub = () => {
   cy.get("[data-purpose = tab-nav-buttons] > div > div > div")
     .should("have.length", topics.length)
@@ -45,9 +44,7 @@ const addingCourseFromSkillsHub = () => {
     .click();
 };
 
-//Adding Course from Students are viewing Panel
 const addingCourseFromTrending = () => {
-  //Taking randomly 3rd course
   cy.get("#course-unit-container-Studentsareviewing > [data-index = 3]").as(
     "course"
   );
@@ -69,7 +66,6 @@ const addingCourseFromTrending = () => {
   cy.get("[data-purpose = cart-icon]").trigger("mouseover");
   cy.get("a.panel-menu--item--3U1oy").should("exist").and("have.length", 1);
 
-  //Navigate to cart
   cy.get("[data-purpose=header-shopping-cta]")
     .should("exist")
     .and("be.visible")
@@ -102,41 +98,35 @@ describe("Checking the Cart functionality", () => {
     });
 
     it("Adding a course from each skill in Skills Hub Panel", () => {
-      //Cart should not have any items initially
-      cy.get("div.shopping-item--buyable-info--1k-48").should("not.exist");
       addingCourseFromSkillsHub();
     });
 
     it("Deleting a course from the cart of students are viewing Panele", () => {
       addingCourseFromTrending();
 
-      //Check url at cart page
       cy.url().should("eq", "https://www.udemy.com/cart/");
 
-      //Initially 1 course in cart
       cy.get("[data-purpose = cart-list-title]")
         .should("exist")
         .and("be.visible")
         .and("have.text", "1 Course in Cart");
 
-      //Delete action
       cy.get("[data-purpose = actions]").click();
 
-      //Now 0 courses in cart
       cy.get("[data-purpose = cart-list-title]")
         .should("exist")
         .and("be.visible")
         .and("have.text", "0 Courses in Cart");
 
-      //Navigate to home page
       cy.get("[data-purpose = keep-shopping-action]")
         .should("exist")
         .and("be.visible")
         .click();
+
       cy.url().should("eq", "https://www.udemy.com/");
     });
 
-    it.only("Deleting all courses of skills hub panel in the cart", () => {
+    it("Deleting all courses of skills hub panel in the cart", () => {
       addingCourseFromSkillsHub();
 
       cy.url().should("eq", "https://www.udemy.com/cart/");
@@ -153,17 +143,16 @@ describe("Checking the Cart functionality", () => {
           .click();
       }
 
-      //Now 0 courses in cart
       cy.get("[data-purpose = cart-list-title]")
         .should("exist")
         .and("be.visible")
         .and("have.text", "0 Courses in Cart");
 
-      //Navigate to home page
       cy.get("[data-purpose = keep-shopping-action]")
         .should("exist")
         .and("be.visible")
         .click();
+
       cy.url().should("eq", "https://www.udemy.com/");
     });
   });
