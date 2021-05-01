@@ -5,6 +5,12 @@ describe("Check Body of Udemy's home page", () => {
     cy.VisitAndWait();
   });
 
+  const brand = [
+    "Over 130,000 video courses on career and personal skills",
+    "Choose from top industry instructors across the world",
+    "Learn at your own pace, with lifetime access on mobile and desktop",
+  ];
+
   const topics = [
     "Python",
     "Excel",
@@ -63,6 +69,27 @@ describe("Check Body of Udemy's home page", () => {
           .should("exist")
           .and("have.text", `Explore ${topics[index]}`);
       });
+    });
+
+    it.only("Checks Udemy Brand value panel", () => {
+      cy.get("[data-purpose = value-props]")
+        .should("exist")
+        .and("be.visible")
+        .within(() => {
+          // cy.get("h2").should("exist").and("be.visible");  //[Glitch in the website: The element exists but is not visible]
+          cy.get("div.value-props--prop--1d4kK")
+            .should("exist")
+            .and("be.visible")
+            .each(($item, index) => {
+              cy.wrap($item).within(() => {
+                cy.get("svg").should("exist").and("be.visible");
+                cy.get("div.udlite-heading-lg")
+                  .should("exist")
+                  .and("be.visible")
+                  .and("have.text", brand[index]);
+              });
+            });
+        });
     });
 
     it("Check 'Students are viewing' panel", () => {
