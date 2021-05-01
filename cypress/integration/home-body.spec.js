@@ -71,7 +71,7 @@ describe("Check Body of Udemy's home page", () => {
       });
     });
 
-    it.only("Checks Udemy Brand value panel", () => {
+    it("Checks Udemy Brand value panel", () => {
       cy.get("[data-purpose = value-props]")
         .should("exist")
         .and("be.visible")
