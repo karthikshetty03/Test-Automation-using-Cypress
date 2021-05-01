@@ -74,6 +74,8 @@ This website has course cards which are similar to the wikipedia preview plugin 
 
  - ### [trending-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/trending-previews.spec.js)
  - ### [skills-preview.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/skills-previews.spec.js)
+ - ### [cart.spec.js](https://github.com/karthikshetty03/Cypress-Microtasks-GSOC-21/blob/main/cypress/integration/cart.spec.js)
+
 ## Installation
 
 ```bash
