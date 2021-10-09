@@ -6,17 +6,6 @@
  <hr/>
 <br/>
 
-
-
-<br/>
-
-## Why this website?
-
-
-This website has course cards which are similar to the wikipedia preview plugin and can face isues similar to that mentioned in this [storybook](https://wikimedia.github.io/wikipedia-preview/storybook-static/?path=/story/wikipedia-preview--standard-with-image)
-
-<br/>
-
 ## Folder Structure
 
 ```
