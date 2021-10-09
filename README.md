@@ -1,7 +1,7 @@
 
  <hr/>
  
- <h1><b>&emsp; &emsp;  &emsp; Cypress Tests for [Udemy's homepage](https://www.udemy.com/) <b/></h1>
+ # Cypress Tests for [Udemy's homepage](https://www.udemy.com/) 
  
  <hr/>
 <br/>
